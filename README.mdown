@@ -1,1 +1,14 @@
 This is my random set of tools.
+
+##database_backup.sh##
+
+This is my database backup script that I use for my weblog.
+
+##generate_rails_doc.sh##
+
+This is a script that generates Rails API in HTML format.
+
+##screencapture.sh##
+
+This script takes a screenshots and saves it to Dropbox.
+
