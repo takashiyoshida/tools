@@ -18,6 +18,18 @@
 DROPBOX="${HOME}/Dropbox"
 PHOTOS="${DROPBOX}/Photos"
 
+# Supported file format:
+# png (default)
+# pdf
+# jpg
+# tiff
+IMG_FORMAT="png"
+
 # Create a filename that we will use for a new screen capture.
+# Filename is YYYYmmddHHMMSS
+
+# I might want to look into a possibility that such filename already exists 
+# at the destination. Maybe write with a temporary filename first, and 
+# rename it when the new name is known to be available.
 filename=`date "+%Y%m%d%H%M%S"`
-/usr/sbin/screencapture -t png "${PHOTOS}/${filename}.png"
+/usr/sbin/screencapture -t ${IMG_FORMAT} "${PHOTOS}/${filename}.${IMG_FORMAT}"
