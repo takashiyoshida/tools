@@ -14,4 +14,9 @@ FFMPEG_OPT="-y -b 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -vp
 # See other available options in /opt/local/share/ffmpeg
 FFMPEG_VPRE="libx264-default"
 
-`${GOURCE} ${GOURCE_OPT} $1 | ${FFMPEG} ${FFMPEG_OPT} ${FFMPEG_VPRE} $2`
+if [ $# != 2 ]; then
+	echo "usage: $0 <input file> <output file>"
+	exit 0
+fi
+
+${GOURCE} ${GOURCE_OPT} "$1" | ${FFMPEG} ${FFMPEG_OPT} ${FFMPEG_VPRE} "$2"
