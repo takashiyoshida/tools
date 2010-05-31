@@ -17,7 +17,7 @@ def get_color_code(filled):
 	
 	return (
 		color_green if filled > 6
-		else color_yellow if filled > 5
+		else color_yellow if filled > 4
 		else color_red
 	)
 
