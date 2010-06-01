@@ -1,5 +1,17 @@
 #!/usr/bin/env python
 # coding=UTF-8
+#
+# This is Python script that returns battery information from `ioreg`.
+# The code was stolen from Steve Losh's blog:
+# <http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/>
+#
+# I separated Steve's script into two parts:
+# battery.py - Returns battery information
+# prompt-color.py - Adjusts prompt color based on the battery level received 
+#   from battery.py script.
+#
+# This script works on Mac OS X only.
+#
 
 import math, subprocess
 
