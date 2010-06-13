@@ -12,7 +12,7 @@
 #
 
 GOURCE=/opt/local/bin/gource
-GOURCE_OPT="--disable-progress --stop-at-end --output-ppm-stream -"
+GOURCE_OPT="--hide filenames --highlight-all-users --camera-mode track --disable-progress --stop-at-end --output-ppm-stream -"
 
 FFMPEG=/opt/local/bin/ffmpeg
 FFMPEG_OPT="-y -b 3000K -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -vpre"
